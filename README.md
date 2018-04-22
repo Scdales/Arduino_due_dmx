@@ -22,3 +22,5 @@ This is needed because the Arduino Due operates at 3.3V and will shift 5V signal
 ## Usage
 
 Use this script to make sure your Due is correctly reading the DMX protocol. Make sure you're getting the correct values at the correct addresses. Bear in mind that Serial logging in other Arduino models has influenced CPU speed to the point where it impacts the ability for the arduino to read the DMX effectively.
+
+The maximum and minimum values may need to be altered depending on what you're interfacing with. I've had to use values of 250 - 500 microseconds for my test system, but in production the gap between frames was ~1000 microseconds.
